@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <script src="https://mcapi.us/scripts/minecraft.js"></script>
-    <div class="server-status" style="color:rgb(4, 142, 160);font-size:large;text-align:center;font-family:sans-serif">
-      The server is currently <span class="server-online"></span>! 
-    </div>
-    <script>
-      MinecraftAPI.getServerStatus('placeholdertext.aternos.me', {
-        port: 25565 // optional, only if you need a custom port
-      }, function (err, status) {
-        if (err) {
-          return document.querySelector('.server-status').innerHTML = 'Error loading status';
-        }
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Minecraft server status widget</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Mono'><link rel="stylesheet" href="./style.css">
 
-        // you can change these to your own message!
-        document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
-      });
-    </script>
-    </body>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="card"> <div class="icon"><img src="https://pbs.twimg.com/profile_images/808180587605331969/u-CULTwl_400x400.jpg" id="favicon"></div><div class="header">
+  <div class="image"> <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/35/Overworld.jpg" alt="" /> </div>
+ 
+  <h2>PLACEHOLDERTEXT</h2>
+  </div>
+  <div id="rest">Loading ...</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
